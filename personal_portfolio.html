@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Gupta - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Prince Gupta</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/assets/Prince_Gupta_Resume.pdf">Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Prince Gupta</h1>
+            <p class="subtitle">Full Stack Developer</p>
+            <p class="description">I create beautiful, responsive web applications with modern technologies. Passionate
+                about clean code and exceptional user experiences.</p>
+            <a href="#about" class="cta-button">Get to Know Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-content fade-in">
+            <div class="about-image">
+                <img src="/assets/profile.png" alt="Profile Picture">
+            </div>
+            <div class="about-text">
+                <h3>I'm a passionate developer,</h3>
+                <p>pursuing a Bachelor of Computer Applications (BCA) from Atmiya University. I have a strong interest
+                    in technology and software development. I enjoy learning new skills related to programming, web
+                    development, and computer science.</p>
+                <p>I am always curious to explore how things work and love working on practical projects to improve my
+                    knowledge. I'm also open to teamwork and like to learn from others. In my free time, I often watch
+                    tech videos, try coding challenges, or explore new tools and technologies.</p>
+            </div>
+        </div>
+
+        <div class="skills fade-in">
+            <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <h4>Frontend Development</h4>
+                <p>HTML5, CSS3, JavaScript, React</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <h4>Backend Development</h4>
+                <p>Node.js, Express.js, PHP</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <h4>Database Management</h4>
+                <p>MySQL, MongoDB</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>Mobile Development</h4>
+                <p>Flutter(learning), </p>
+                <p>Dart, Android Studio</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2 class="section-title fade-in">My Projects</h2>
+        <div class="projects-grid fade-in">
+            <div class="project-card">
+                <div class="project-image">
+                     <img src="assets/weather.png" alt="">
+                </div>
+                <div class="project-content">
+                    <h3>Weather app</h3>
+                    <p>A responsive web application, myWeather-App, leverages Bootstrap 5 for its user interface and integrates with a third-party API (RapidAPI) to deliver real-time weather information, demonstrating strong front-end development skills.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/library.png" alt="library management">
+                </div>
+                <div class="project-content">
+                    <h3>Library Management System</h3>
+                    <p>Hackathon project: A full-stack Library Management System built with PHP, MySQL, HTML, CSS, and Bootstrap. Features include user login/logout, online PDF viewer, an admin panel for issuing books, and book availability search.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <div class="contact-content fade-in">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span><a href="mailto:princegupta7698@gmail.com">princegupta7698@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span><a href="tel:+918200225365">8200225365</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Rajkot, India</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span><a href="https://www.linkedin.com/in/prince-gupta-32a91627b/"
+                            target="_blank">prince-gupta</a></span>
+                </div>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="f63f8f1c-f917-42b3-8b26-0815c4e453d8">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/princegupta1614/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/prince-gupta-32a91627b/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Prince_Gupta42" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/prince_gupta1614/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>
+            &copy;
+            <script>document.write(new Date().getFullYear());</script> Prince Gupta. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                navLinks.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        const heroTitle = document.querySelector('.hero h1');
+        const originalText = heroTitle.textContent;
+        heroTitle.textContent = '';
+
+        let i = 0;
+        const typeWriter = () => {
+            if (i < originalText.length) {
+                heroTitle.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+
+        setTimeout(typeWriter, 1000);
+
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+
+</html>
