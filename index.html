@@ -9,6 +9,111 @@
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <meta name="google-site-verification" content="YY0OctQSbsWhxrXBUNuqzhKJwGpJUj0GT31hO0QIfGE" />
+
+    <style>
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); 
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    
+        /* Modal Active State */
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+    
+        .modal-overlay.active .modal-box {
+            transform: translateY(0);
+        }
+    
+        .modal-icon {
+            font-size: 50px;
+            color: #4f46e5;
+            margin-bottom: 20px;
+        }
+    
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+    
+        .modal-text {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+    
+        .highlight-badge {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+    
+        .btn-cancel {
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #64748b;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+    
+        .btn-cancel:hover {
+            background: #f1f5f9;
+        }
+    
+        .btn-confirm {
+            padding: 12px 24px;
+            border-radius: 12px;
+            background: #4f46e5;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+            transition: all 0.2s;
+        }
+    
+        .btn-confirm:hover {
+            background: #4338ca;
+            transform: translateY(-2px);
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -140,7 +245,7 @@
                     <p>A smart business management app featuring AI insights, PDF invoice generation,send email invoice, and real-time
                         inventory tracking. Built with React Native & Node.js, Express.js, Mongodb, Mongoose, JWT, pdfkit, etc.. </p>
                     <div class="project-links">
-                        <a href="https://drive.google.com/file/d/179lc88Y8e1vbV20CNDP-wNFWvXzKMwBV/view?usp=sharing" class="project-link download-btn">
+                        <a href="javascript:void(0)" id="triggerDownload" class="project-link download-btn">
                             <i class="fab fa-android"></i> Download APK
                         </a>
                         <a href="https://github.com/princegupta1614/tradly-mobile" target="_blank"
@@ -208,6 +313,32 @@
             <script>document.write(new Date().getFullYear());</script> Prince Gupta. All rights reserved.
         </p>
     </footer>
+
+    <div class="modal-overlay" id="apkModal">
+        <div class="modal-box">
+            <div class="modal-icon">
+                <i class="fab fa-android"></i>
+            </div>
+            <h3 class="modal-title">Download Android App</h3>
+            
+            <div class="modal-text">
+                <p><strong>File Size:</strong> <span class="highlight-badge">~116 MB</span></p>
+                <p style="margin-top: 10px; font-size: 0.9em;">
+                    This is a <strong>Universal APK</strong>. It contains native support for all Android devices (Modern, Budget, Tablets & Emulators) in a single file to ensure compatibility.
+                </p>
+                <p style="margin-top: 10px; font-size: 0.85em; font-style: italic; opacity: 0.8;">
+                    (Note: Play Store downloads are smaller because they auto-detect your specific device.)
+                </p>
+            </div>
+    
+            <div class="modal-actions">
+                <button class="btn-cancel" id="closeModal">Cancel</button>
+                <a href="https://github.com/princegupta1614/tradly-mobile/releases/download/v1.0.0/app-release.apk" class="btn-confirm" id="confirmDownload">
+                    Download Anyway
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -288,6 +419,29 @@
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'translateY(0) scale(1)';
             });
+        });
+
+        const modal = document.getElementById('apkModal');
+        const triggerBtn = document.getElementById('triggerDownload');
+        const closeBtn = document.getElementById('closeModal');
+        const confirmBtn = document.getElementById('confirmDownload');
+    
+        triggerBtn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            modal.classList.add('active');
+        });
+    
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+    
+        confirmBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
         });
     </script>
 </body>
